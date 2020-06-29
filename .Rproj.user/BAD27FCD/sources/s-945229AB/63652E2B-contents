@@ -1,5 +1,0 @@
-name: "ICI"
-output_dir: "ICI-Doc"
-output:
-  html_document:
-  

@@ -1,5 +1,5 @@
 name: "ICI"
-output_dir: "ICI-Doc"
+output_dir: "docs"
 output:
   html_document:
   
