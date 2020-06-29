@@ -5,7 +5,9 @@ knit: (function(input_file, encoding) {
   rmarkdown::render(input_file,
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
-output: html_document
+output: 
+  html_document:
+    theme: cosmo
 ---
 
 <style type="text/css">
@@ -23,6 +25,8 @@ font-size: 42px
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+***
 
 ```{r ICI-National, cache=FALSE, out.width = "100%", fig.cap="Figure 1.  The U.S. Immigrant Climate has become increasingly negative since 2005, bottomed in 2012 and has since gotten a little more positive due to laws at the city and county levels. (Updated August 2018)", echo=FALSE}
 knitr::include_graphics("Fig-US-ICI-NoPhases.png")
@@ -59,10 +63,14 @@ For a more detailed discussion on the construction of the ICI and the Local Immi
 
 ## Research Using the Sub-Federal Immigration Laws Database
 
-- Sub-Federal Immigration Regulation and the Trump Effect (with Huyen Pham) New York University Law Review, forthcoming.
-- State-Created Immigration Climates: the Influence of Domestic Migrants (Huyen Pham and Pham Hoang Van), University of Hawaii Law Review, vol. 38, no. 1, 2016. pp. 181-210.
+- [Sub-Federal Immigration Regulation and the Trump Effect](https://ssrn.com/abstract=3171663) (with [Huyen Pham](http://law.tamu.edu/Faculty/FacultyProfiles/HuyenPham.aspx)) New York University Law Review, forthcoming.
+- State-Created Immigration Climates: the Influence of Domestic Migrants ([Huyen Pham](http://law.tamu.edu/Faculty/FacultyProfiles/HuyenPham.aspx) and [Pham Hoang Van](https://www.baylor.edu/Van_Pham/)), University of Hawaii Law Review, vol. 38, no. 1, 2016. pp. 181-210.
 reprinted in Immigration and Nationality Law Review, University of California—Davis, forthcoming, 2017.
-- Measuring the Climate for Immigrants: A State-by-State Analysis (Huyen Pham and Pham Hoang Van), in Strange Neighbors: The Role of States in Immigration Policy, Gabriel Jack Chin and Carissa Hessick (eds.) New York University Press, 2014, Chapter 1, pp. 21-40.
-- Measuring State-Created Immigration Climate, (Huyen Pham and Pham Hoang Van), in How to Measure Immigration Policies?, Migration and Citizenship Newsletter of the American Political Science Association, 2013.
-- The Economic Impact of Subfederal Immigration Regulation: An Empirical Analysis (Huyen Pham and Pham Hoang Van), Cardozo Law Review, vol. 32, no. 2, November 2010, pp. 485-518.
+- [Measuring the Climate for Immigrants: A State-by-State Analysis](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1986128) ([Huyen Pham](http://law.tamu.edu/Faculty/FacultyProfiles/HuyenPham.aspx) and [Pham Hoang Van](https://www.baylor.edu/Van_Pham/)), in Strange Neighbors: The Role of States in Immigration Policy, Gabriel Jack Chin and Carissa Hessick (eds.) New York University Press, 2014, Chapter 1, pp. 21-40.
+- Measuring State-Created Immigration Climate, ([Huyen Pham](http://law.tamu.edu/Faculty/FacultyProfiles/HuyenPham.aspx) and [Pham Hoang Van](https://www.baylor.edu/Van_Pham/)), in How to Measure Immigration Policies?, Migration and Citizenship Newsletter of the American Political Science Association, 2013.
+- The Economic Impact of Subfederal Immigration Regulation: An Empirical Analysis ([Huyen Pham](http://law.tamu.edu/Faculty/FacultyProfiles/HuyenPham.aspx) and [Pham Hoang Van](https://www.baylor.edu/Van_Pham/)), Cardozo Law Review, vol. 32, no. 2, November 2010, pp. 485-518.
 reprinted in Immigration and Nationality Law Review, vol. 31, 2012.
+
+***
+
+###### &copy; 2020 Huyen Pham and Pham Hoang Van 
