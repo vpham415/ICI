@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="PHV" />
+
+
+<title>Immigrant Climate Index</title>
+
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Immigrant Climate Index</h1>
+<h4 class="author">PHV</h4>
+
+</div>
+
+
+<style type="text/css">
+body{ /* Normal */
+font-size: 20px;
+}
+code.r{ /* Code block */
+font-size: 4px;
+}
+pre {
+font-size: 42px
+}
+</style>
+<div class="figure">
+<img src="Fig-US-ICI-NoPhases.png" alt="Figure 1.  The U.S. Immigrant Climate has become increasingly negative since 2005, bottomed in 2012 and has since gotten a little more positive due to laws at the city and county levels. (Updated August 2018)" width="100%" />
+<p class="caption">
+Figure 1. The U.S. Immigrant Climate has become increasingly negative since 2005, bottomed in 2012 and has since gotten a little more positive due to laws at the city and county levels. (Updated August 2018)
+</p>
+</div>
+<hr />
+<blockquote>
+<p>The ICI scores for the U.S. above and state scores in the map below capture climates toward immigrants created by legislation enacted at the state, county, and city levels from 2005 to 2017. A more negative score denotes a more hostile climate; a more positive score a more hospitable climate. The methodology we use to construct the ICI is described below.</p>
+</blockquote>
+<hr />
+<div class="figure">
+<img src="ICIState200517.png" alt="" />
+<p class="caption">Figure 2. Immigrant climates vary widely across states; the polar positions are occupied by two neighboring states, California and Arizona. (Updated August 2018)</p>
+</div>
+<hr />
+<div id="methodology-constructing-the-ici" class="section level2">
+<h2>Methodology: Constructing the ICI</h2>
+<p>We have been collecting city, county, and state immigration laws from 2005 to 2017. From this database of subfederal laws we construct the ICI, a measure of regulation-induced climate for immigrants. We classified laws into one of four tiers and assigned a weight to individual laws based on the tier, whether it provides a benefit (+) or a restriction (-), and its geographic reach.Tier 4 laws (± 4 points) affect many aspects of life for immigrants and have the most impact on climate. This tier consists of regulations related to law enforcement, includes laws that enhance or restrict the authority of law enforcement to enforce immigration laws and laws that change a defendant’s treatment in the criminal justice system, based on immigration status. Among subfederal immigration regulations, these laws have the most impact because contact with law enforcement may lead to detention or deportation for immigrants.</p>
+<p>Tier 3 laws (± 3 points) affect a crucial aspect of life for immigrants, an aspect that is difficult for the immigrant to avoid or substitute. We include in this tier laws that make it harder or easier for immigrants to obtain private housing (e.g., laws that require landlords to check the immigration status of tenants), identification (like driver’s licenses), or any kind of employment (e.g., by requiring employers to verify the lawful immigration status of employees or face state or local penalties).</p>
+<p>Tier 2 laws (± 2 points) affect an important but not crucial aspect of life for immigrants, an aspect for which immigrants can find alternatives, albeit not easily. This tier includes laws that make it harder or easier for immigrants to obtain specific jobs (including work as day laborers) or specific work licenses (like CPA licenses). The tier also includes laws that restrict or enhance access to government benefits based on immigration status, benefits like welfare programs, workers’ compensation, healthcare, public housing, naturalization and refugee assistance, and education programs.</p>
+<p>Finally, Tier 1 laws (± 1 point) affect immigrants’ lives but in a less important or less significant way. Laws in this tier include English-only laws, laws that make it harder or easier for immigrants to vote, or legal services laws (typically laws that regulate the legal market to prevent immigrants from being defrauded).</p>
+<p>The laws are weighted by the fraction of the state population that lives in the jurisdiction covered by the law.</p>
+<p>We started our data collection with laws enacted in 2005, the year that subfederal immigration regulation began in earnest. Certainly, there was some subfederal enforcement before 2005, but these laws were largely isolated in nature.</p>
+<p>For a more detailed discussion on the construction of the ICI and the Local Immigration Laws Database, see the second reference listed below.</p>
+<hr />
+</div>
+<div id="research-using-the-sub-federal-immigration-laws-database" class="section level2">
+<h2>Research Using the Sub-Federal Immigration Laws Database</h2>
+<ul>
+<li>Sub-Federal Immigration Regulation and the Trump Effect (with Huyen Pham) New York University Law Review, forthcoming.</li>
+<li>State-Created Immigration Climates: the Influence of Domestic Migrants (Huyen Pham and Pham Hoang Van), University of Hawaii Law Review, vol. 38, no. 1, 2016. pp. 181-210. reprinted in Immigration and Nationality Law Review, University of California—Davis, forthcoming, 2017.</li>
+<li>Measuring the Climate for Immigrants: A State-by-State Analysis (Huyen Pham and Pham Hoang Van), in Strange Neighbors: The Role of States in Immigration Policy, Gabriel Jack Chin and Carissa Hessick (eds.) New York University Press, 2014, Chapter 1, pp. 21-40.</li>
+<li>Measuring State-Created Immigration Climate, (Huyen Pham and Pham Hoang Van), in How to Measure Immigration Policies?, Migration and Citizenship Newsletter of the American Political Science Association, 2013.</li>
+<li>The Economic Impact of Subfederal Immigration Regulation: An Empirical Analysis (Huyen Pham and Pham Hoang Van), Cardozo Law Review, vol. 32, no. 2, November 2010, pp. 485-518. reprinted in Immigration and Nationality Law Review, vol. 31, 2012.</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
